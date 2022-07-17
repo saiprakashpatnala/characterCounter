@@ -13,12 +13,12 @@ class App extends Component {
   start = event => {
     event.preventDefault()
     const {searchInput} = this.state
-    const na = {
+    const newText = {
       id: uuidv4(),
       item: searchInput,
     }
     this.setState(prevState => ({
-      wordsList: [...prevState.wordsList, na],
+      wordsList: [...prevState.wordsList, newText],
       searchInput: '',
     }))
   }
